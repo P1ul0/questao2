@@ -1,22 +1,22 @@
 package Entidade;
 
 public class Node {
-    private Pessoa chave ;
+    private Pessoa value;
     private Node prox;
     private Node ant;
 
     public Node(Pessoa chave) {
-        this.chave = chave;
+        this.value = chave;
         this.ant = null;
         this.prox = null;
     }
 
-    public Pessoa getChave() {
-        return chave;
+    public Pessoa getValue() {
+        return value;
     }
 
-    public void setChave(Pessoa chave) {
-        this.chave = chave;
+    public void setValue(Pessoa value) {
+        this.value = value;
     }
 
     public Node getProx() {
