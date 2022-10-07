@@ -1,5 +1,4 @@
 import Entidade.Lista;
-import Entidade.Node;
 import Entidade.Pessoa;
 
 public class Main {
@@ -19,5 +18,6 @@ public class Main {
         l.print();
         l.copiarLista(l2);
         l2.print();
+        l.procurar(3);
     }
 }

@@ -8,6 +8,24 @@ public class Lista {
         this.head = null;
         this.tail = null;
     }
+
+    public void procurar(int id){
+        Node p = this.head;
+        boolean check = false;
+        while (p != null){
+            if (p.getValue().getId() == id) {
+                check = true;
+                break;
+            }
+            p = p.getProx();
+        }
+        if (check){
+            System.out.println(p.getValue().getNome());
+        }else {
+            System.out.println("usuario não encontrado");
+        }
+    }
+
     
     public  void inserir(Pessoa novaPessoa){
         Node node = new Node(novaPessoa);
@@ -23,8 +41,7 @@ public class Lista {
                         this.head.setAnt(node);
                         this.head = node;
                     }else {
-                        p.getAnt().setProx(node);
-                        node.setAnt(p.getAnt());
+
                         node.setProx(p);
                         p.setAnt(node);
 
